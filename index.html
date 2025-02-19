@@ -3,43 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Homepage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            padding: 50px;
-        }
-        h1 {
-            color: #333;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 18px;
-            color: white;
-            background-color: #008CBA;
-            border: none;
-            cursor: pointer;
-            transition: 0.3s;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .button:hover {
-            background-color: #005f73;
-        }
-    </style>
+    <title>Mini-Golf Paradise</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Willkommen auf meiner Homepage!</h1>
-        <p>Hier kannst du Infos über mich finden.</p>
-        <a href="#" class="button">Mehr erfahren</a>
-    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Startseite</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#courses">Bahnen</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+        <h1>Willkommen bei Mini-Golf Paradise</h1>
+    </header>
+
+    <section id="home">
+        <h2>Erlebe den Spaß am Mini-Golf</h2>
+        <p>Entdecke unsere einzigartigen Mini-Golf-Bahnen und genieße einen tollen Tag mit Freunden und Familie.</p>
+        <button id="cta-button">Jetzt buchen!</button>
+    </section>
+
+    <section id="about">
+        <h2>Über uns</h2>
+        <p>Mini-Golf Paradise bietet seit über 20 Jahren Spaß und Unterhaltung für Groß und Klein. Unsere Bahnen sind liebevoll gestaltet und bieten für jeden etwas.</p>
+    </section>
+
+    <section id="courses">
+        <h2>Unsere Bahnen</h2>
+        <p>Entdecke unsere verschiedenen Bahnen, die von einfach bis herausfordernd reichen. Jede Bahn hat ihr eigenes Thema und ihre eigenen Herausforderungen.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <p>Hast du Fragen oder möchtest du einen Platz reservieren? Kontaktiere uns gerne!</p>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Nachricht:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Senden</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Mini-Golf Paradise. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
