@@ -1,37 +1,56 @@
+/* Allgemeine Stile */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+}
+
+header .logo img {
+    max-width: 150px;
+    height: auto;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
 }
 
 section {
     padding: 20px;
-    margin: 20px;
+    margin: 20px auto;
+    max-width: 800px;
     background-color: white;
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 button {
@@ -41,6 +60,7 @@ button {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 1em;
 }
 
 button:hover {
@@ -52,11 +72,46 @@ footer {
     padding: 10px;
     background-color: #333;
     color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    margin-top: 20px;
 }
 
+/* Mobile Optimierung */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .gallery img {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+/* Galerie */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.gallery img {
+    max-width: 30%;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+/* Kontaktformular */
 form {
     display: flex;
     flex-direction: column;
@@ -64,6 +119,7 @@ form {
 
 form label {
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 form input, form textarea {
@@ -71,8 +127,26 @@ form input, form textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1em;
 }
 
 form button {
     align-self: flex-start;
+}
+
+/* Social Media Links */
+.social-media {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
 }
